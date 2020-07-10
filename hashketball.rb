@@ -171,15 +171,12 @@ def player_numbers(team_name)
 end  
 
 def player_stats(player_name)
-  playerArray = []
   game_hash.values.each do |team|  
-      if team.has_value?(team_name) then
-        team[:players].each do |player|
-          playerArray.append(player[:number])
-        end
+    team[:players].each do |player|   
+      if player.has_value?(player_name) then
+        return player
       end
     end
-  return playerArray
+  end
 end  
-  
 # Write code here
