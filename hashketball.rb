@@ -164,6 +164,7 @@ def player_numbers(team_name)
       if team.has_value?(team_name) then
         team[:players].each do |player|
           playerArray.append(player)
+        end
       end
     end
   return playerArray
