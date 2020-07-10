@@ -159,11 +159,14 @@ def team_names
 end
 
 def player_numbers(team_name)
+  playerArray = []
   game_hash.values.each do |team|  
       if team.has_value?(team_name) then
         team[:players].each do |player|
+          playerArray.append(player)
       end
     end
+  return playerArray
 end  
   
 # Write code here
