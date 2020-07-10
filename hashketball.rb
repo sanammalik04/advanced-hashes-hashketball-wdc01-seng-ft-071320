@@ -128,12 +128,14 @@ end
 
 def num_points_scored(player)
   game_hash.values.each do |team|  
-    team[:players].each do |player|     end
+    team[:players].each do |player|   
       if player.has_value?(player_name) then
         return player[:points] 
       end
     end
-  end game_hash
+  end
+end  
+  game_hash
   result = game_hash[:away][:players].select{|key, hash| hash[:player_name] == player} 
   if result.length > 0 then
    return result["points"]
