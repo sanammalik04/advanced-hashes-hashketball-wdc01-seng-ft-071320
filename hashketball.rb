@@ -161,7 +161,7 @@ end
 def player_numbers(team_name)
   game_hash.values.each do |team|  
       if team.has_value?(team_name) then
-        return team[:colors] 
+        team[:players].each do |player|
       end
     end
 end  
