@@ -126,7 +126,7 @@ def game_hash
   }
 end
 
-def num_points_scored(player)
+def num_points_scored(player_name)
   game_hash.values.each do |team|  
     team[:players].each do |player|   
       if player.has_value?(player_name) then
@@ -135,29 +135,6 @@ def num_points_scored(player)
     end
   end
 end  
-  game_hash
-  result = game_hash[:away][:players].select{|key, hash| hash[:player_name] == player} 
-  if result.length > 0 then
-   return result["points"]
-  else 
-    result = game_hash[:home][:players].select{|key, hash| hash[:player_name] == player} 
-    if result.length > 0 then
-      return result["points"]
-    end
-  end
-end
-
-def shoe_size(player)
-  game_hash
-  result = game_hash[:away][:players].select{|key, hash| hash[:player_name] == player} 
-  if result.length > 0 then
-   return result["shoe_size"]
-  else 
-    result = game_hash[:home][:players].select{|key, hash| hash[:player_name] == player} 
-    if result.length > 0 then
-      return result["shoe_size"]
-    end
-  end
-end
+ 
   
 # Write code here
